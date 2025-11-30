@@ -1,4 +1,4 @@
-# CryptoSplit - Decentralized Bill Splitter
+# SplitETH - Decentralized Bill Splitter
 
 > Split bills with friends using Web3. Trustless. Transparent. Simple.
 
