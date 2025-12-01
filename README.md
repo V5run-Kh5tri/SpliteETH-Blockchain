@@ -24,7 +24,7 @@ A fully decentralized Web3 application for splitting bills with friends using cr
 
 ### Frontend
 
-- Vanilla JavaScript with ethers.js
+- ReactJS with ethers.js
 - Clean, responsive UI
 - Real-time blockchain interaction
 
@@ -64,7 +64,7 @@ forge script script/Deploy.s.sol --rpc-url https://sepolia.infura.io/v3/YOUR_KEY
 
 ### 3. Update Frontend
 
-After deployment, update `frontend/app.js`:
+After deployment, update `frontend2/app.js`:
 
 ```javascript
 let CONTRACT_ADDRESS = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
@@ -73,11 +73,9 @@ let CONTRACT_ADDRESS = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
 ### 4. Run Frontend
 
 ```shell
-cd frontend
-python3 -m http.server 8000
+cd frontend2
+npm run dev
 ```
-
-Open http://localhost:8000
 
 ## 🎮 How to Use
 
@@ -94,37 +92,23 @@ Open http://localhost:8000
 - `getBill()` - View bill details
 - `hasPaid()` - Check if someone paid
 
-## 🔒 Security Features
-
-- ✅ Reentrancy protection
-- ✅ Participant validation
-- ✅ Double payment prevention
-- ✅ Access control
-- ✅ Automatic refunds
-
-## 🌐 Supported Networks
-
-- Ethereum Mainnet/Sepolia
-- Polygon/Mumbai
-- Any EVM-compatible chain
 
 ## 🛠️ Tech Stack
 
 - **Smart Contracts**: Solidity 0.8.20
 - **Development**: Foundry
-- **Frontend**: HTML/CSS/JavaScript
+- **Frontend**: ReactJS
 - **Web3**: ethers.js v5
 
 ## 📂 Project Structure
 
 ```
-Apay/
 ├── contracts/BillSplitter.sol    # Main contract
 ├── script/Deploy.s.sol            # Deployment
 ├── test/BillSplitter.t.sol        # Tests
-├── frontend/
+├── frontend2/
 │   ├── index.html                 # UI
-│   └── app.js                     # Web3 logic
+│   └── app.jsx                   # Web3 logic + UI
 └── README.md
 ```
 
