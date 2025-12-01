@@ -271,7 +271,7 @@ const showWithdrawButton =
     // UI Start
     // --------------------------
     return (
-      <div className="min-h-screen bg-purple-600 p-6 flex justify-center">
+      <div className="min-h-screen bg-gradient-to-r from-gray-100 via-gray-500 to-gray-100 p-6 flex justify-center">
         <div className="bg-white max-w-2xl w-full p-8 rounded-2xl shadow-2xl">
 
           <h1 className="text-3xl font-bold text-indigo-500 text-center">SplitETH </h1>
@@ -412,7 +412,7 @@ const showWithdrawButton =
                     value={p}
                     onChange={(e) => updatePerson(i, e.target.value)}
                     className="w-full p-3 mt-1 rounded-lg font-mono border-gray-500 border-1"
-                    placeholder="0x..."
+                    placeholder="Copy wallet address of the participants i.e. 0x..."
                   />
 
                   <button
@@ -421,7 +421,7 @@ const showWithdrawButton =
                         setPeople(people.filter((_, idx) => idx !== i));
                       }
                     }}
-                    className="bg-gray-100 rounded-lg ml-2 mt-1 p-2"
+                    className="bg-gray-100 rounded-lg ml-2 mt-1 p-3 py-3.3 cursor-pointer"
                   >
                     <img className="h-7" src="./trash.png" />
                   </button>
@@ -432,14 +432,14 @@ const showWithdrawButton =
 
               <button
                 onClick={addPerson}
-                className="w-full mt-3 bg-green-500 text-white py-2 rounded-lg font-semibold"
+                className="w-full mt-3 bg-green-500 text-white py-2 rounded-lg font-semibold cursor-pointer"
               >
                 + Add Person
               </button>
 
               <button
                 onClick={createBill}
-                className="w-full mt-6 bg-indigo-500 text-white py-3 rounded-lg font-semibold"
+                className="w-full mt-6 bg-indigo-500 text-white py-3 rounded-lg font-semibold cursor-pointer"
               >
                 Create Bill
               </button>
